@@ -1,8 +1,9 @@
-import Calendar from "@/shared/Calendar/Calendar";
 import CardBlue from "@/shared/CardBlue/CardBlue";
-import CardMachine from "@/shared/CardMachine/CardMachine";
 import CardProfile from "@/shared/CardProfile/CardProfile";
+import Maintenance from "@/shared/Maintenance/Maintenance";
 import Navbar from "@/shared/Navbar/Navbar";
+import React from "react";
+
 function page() {
   const profile = {
     img: "/assets/fackUser.jpg",
@@ -16,11 +17,9 @@ function page() {
       <div className="basis-3/5">
         <Navbar />
         <CardBlue />
-        <CardMachine />
       </div>
       <div className="basis-2/5 ">
         <CardProfile data={profile} />
-        <Calendar />
       </div>
     </div>
   );

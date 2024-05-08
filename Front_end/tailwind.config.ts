@@ -10,15 +10,12 @@ module.exports = {
     extend: {
       width: {
         defaultwidth: "90%",
+        defaultwidth2: "95%",
       },
       maxWidth: {
         mwidth1: "1600px",
       },
-<<<<<<< HEAD
 
-=======
-     
->>>>>>> 7f6944b1c339a5c3a6b86dfa2014a140a5a6d73a
       colors: {
         blue: "#4264D0",
         ghostWhite: "#F5F5F7",
@@ -26,10 +23,6 @@ module.exports = {
         lightPurple: "#E9EBFF",
         jordyBlue: "#718BDC",
       },
-<<<<<<< HEAD
-=======
-      
->>>>>>> 7f6944b1c339a5c3a6b86dfa2014a140a5a6d73a
     },
   },
   plugins: [],

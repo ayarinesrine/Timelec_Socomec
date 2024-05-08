@@ -2,10 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
-import React from "react";
-
 function Calendar() {
-  const date = new Date().toLocaleDateString();
   const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const currentDate = new Date();
   const dayOfWeek = daysOfWeek[currentDate.getDay()];
@@ -25,7 +22,7 @@ function Calendar() {
     { task: "task two", time: "10:30 pm" },
   ];
   return (
-    <div className="w-defaultwidth m-auto rounded-xl bg-gradient-to-t from-white to-lightPurple  mt-10">
+    <div className="w-defaultwidth2  m-auto rounded-xl bg-gradient-to-t from-white to-lightPurple  mt-10">
       <div className="bg-blue rounded-xl text-white p-3 py-4 flex">
         <div className="basis-1/2 m-auto"> My Calendar</div>
         <a href="/" className="basis-1/2 flex ">
@@ -33,11 +30,11 @@ function Calendar() {
             <div className="pe-2 hidden lg:block "> {month}</div>
             <div className="text-sm pe-2 lg:hidden block ">
               <span className="text-center">
-                {" "}
                 {month} {day}
               </span>
             </div>
             <FontAwesomeIcon
+              style={{ boxSizing: "initial" }}
               icon={faCalendarDays}
               className="md:h-6 h-4 my-auto"
             />
@@ -59,7 +56,7 @@ function Calendar() {
           </div>
         ))}
       </div>
-      <div className="bg-white p-3 rounded-b-xl  overflow-y-auto max-h-[350px] ">
+      <div className="bg-white p-3 rounded-b-xl  overflow-y-auto max-h-[300px] ">
         {taskCompleted.map((item, index) => (
           <div key={index}>
             <hr
@@ -73,6 +70,7 @@ function Calendar() {
               </span>
               <div className="2xl:basis-5/6 basis-4/6 flex">
                 <FontAwesomeIcon
+                  style={{ boxSizing: "initial" }}
                   icon={faCaretRight}
                   className="md:h-4 h-2 xl:basis-[10%] lg:basis-[20%]  my-auto text-blue lg:px-2 pe-1"
                 />

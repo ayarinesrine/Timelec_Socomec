@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
@@ -14,15 +13,18 @@ function CardProfile(props: {
   };
 }) {
   return (
-    <div className="w-defaultwidth m-auto bg-white rounded-xl">
+    <div className="w-defaultwidth2 m-auto bg-white rounded-xl">
       <div className="bg-blue rounded-xl text-white p-3 py-4 flex">
-        <div className="basis-1/2"> My profile</div>
-        <a href="/profile" className="basis-1/2 flex">
+        <a href="/profile" className="basis-1/2">
+          My profile
+        </a>
+        <div className="basis-1/2 flex">
           <FontAwesomeIcon
+            style={{ boxSizing: "initial" }}
             icon={faPenToSquare}
             className="md:h-6 h-4 ms-auto "
           />
-        </a>
+        </div>
       </div>
       <div className="xl:flex w-full  py-4">
         <div className="xl:basis-2/6 flex ">
@@ -37,6 +39,7 @@ function CardProfile(props: {
             ) : (
               <div className="w-24  bg-lightBlue rounded-full ">
                 <FontAwesomeIcon
+                  style={{ boxSizing: "initial" }}
                   className="w-20 p-4 m-auto text-blue"
                   icon={faUser}
                 />
@@ -49,7 +52,11 @@ function CardProfile(props: {
             <div className="font-bold text-2xl ">{props.data?.name}</div>
             <div className="text-gray-500  ">{props.data?.job}</div>
             <div className="lg:flex  hidden">
-              <FontAwesomeIcon icon={faLocationDot} className="w-4 text-blue" />
+              <FontAwesomeIcon
+                style={{ boxSizing: "initial" }}
+                icon={faLocationDot}
+                className="w-4 text-blue"
+              />
               <div className="ps-2">{props.data?.address}</div>
             </div>
           </div>
@@ -83,40 +90,3 @@ function CardProfile(props: {
 }
 
 export default CardProfile;
-=======
-
-function CardProfile(props: {
-    data?: {
-        img: string
-        name: string
-        job: string
-        address: string
-        birth: string
-    }
-}) {
-    return (
-        <div className='w-defaultwidth m-auto'>
-            <div className="bg-blue rounded-xl text-white p-3">My profile</div>
-            <div className="flex w-full ">
-                <div className="basis-2/6">
-                    <img src={props.data?.img} className="rounded-full" alt={props.data?.name} />
-                </div>
-                <div className="basis-4/6 ">
-                    <div className="">{props.data?.name}</div>
-                    <div className="">{props.data?.job}</div>
-                    <div className="">{props.data?.address}</div>
-                </div>
-            </div>
-            <div className="flex">
-                <div className="basis-1/3">{props.data?.birth}</div>
-                <hr />
-                <div className="basis-1/3">{props.data?.birth}</div>
-                <hr />
-                <div className="basis-1/3">{props.data?.birth}</div>
-            </div>
-        </div>
-    )
-}
-
-export default CardProfile
->>>>>>> 7f6944b1c339a5c3a6b86dfa2014a140a5a6d73a

@@ -5,7 +5,7 @@ import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 function Navbar() {
   return (
-    <div className="flex w-defaultwidth m-auto pb-4">
+    <div className="flex w-defaultwidth2 m-auto pb-4">
       <div className="basis-2/3">
         <div className="flex  bg-white rounded-xl  ">
           <input
@@ -15,6 +15,7 @@ function Navbar() {
           />
           <button type="submit" className="rounded-xl px-2 flex">
             <FontAwesomeIcon
+              style={{ boxSizing: "initial" }}
               icon={faMagnifyingGlass}
               className="md:h-8 h-6 p-1 m-auto text-blue"
             />
@@ -25,6 +26,7 @@ function Navbar() {
         <div className="ms-auto flex ">
           <div className="bg-white p-2 rounded-xl mx-1 flex">
             <FontAwesomeIcon
+              style={{ boxSizing: "initial" }}
               icon={faBell}
               className="md:h-8 h-6 p-1 text-blue m-auto"
             />
@@ -32,6 +34,7 @@ function Navbar() {
 
           <div className="bg-white p-2 rounded-xl mx-1 flex">
             <FontAwesomeIcon
+              style={{ boxSizing: "initial" }}
               icon={faGear}
               className="md:h-8 h-6 p-1 text-blue m-auto"
             />
