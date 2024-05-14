@@ -21,7 +21,7 @@ function CardMachine() {
           <div className="flex pb-5">
             <p className="font-bold text-blue">{item?.name}</p>
             <Link
-              href={"/materials"}
+              href={"/maintenance"}
               className="ms-auto bg-lightPurple text-blue  hover:text-white hover:bg-blue p-1 px-2 rounded-lg   flex h-fit"
             >
               Consulter
@@ -29,7 +29,11 @@ function CardMachine() {
           </div>
 
           <div className="flex w-full">
-            <img className="m-auto " src={`./assets/machine${index + 1}.png`} />
+            <img
+              alt=""
+              className="m-auto "
+              src={`./assets/machine${index + 1}.png`}
+            />
           </div>
         </div>
       ))}

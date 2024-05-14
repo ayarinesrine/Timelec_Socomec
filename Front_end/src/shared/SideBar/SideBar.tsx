@@ -8,7 +8,6 @@ import { useState } from "react";
 import {
   faHouse,
   faUser,
-  faList,
   faToolbox,
   faRightToBracket,
   faScrewdriverWrench,
@@ -18,7 +17,6 @@ function SlideBar() {
   const icons = [
     { title: faHouse, path: "/" },
     { title: faUser, path: "/profile" },
-    { title: faList, path: "/users" },
     { title: faToolbox, path: "/materials" },
     { title: faScrewdriverWrench, path: "/maintenance" },
   ];
@@ -29,7 +27,7 @@ function SlideBar() {
     <div className="w-defaultwidth m-auto py-1 sticky  top-0 sideBar">
       <div className="bg-blue  h-[90vh]  m-auto rounded-xl  py-10 grid ">
         <div className="  ">
-          <img src="./assets/logoWhite.png" className="w-[80%] m-auto" />
+          <img alt="" src="./assets/logoWhite.png" className="w-[80%] m-auto" />
         </div>
         <div>
           {icons.map((item, index) => (
